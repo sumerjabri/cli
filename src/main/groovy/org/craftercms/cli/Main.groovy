@@ -24,13 +24,14 @@ import org.craftercms.cli.commands.security.CreateAccessToken
 import org.craftercms.cli.commands.site.*
 import org.craftercms.cli.commands.user.CreateUser
 import org.craftercms.cli.commands.user.ListUsers
+import org.craftercms.cli.commands.group.AddGroupMembers
 import picocli.CommandLine
 
 @CommandLine.Command(
         name = 'crafter-cli', usageHelpAutoWidth = true,
         versionProvider = VersionProvider.class, mixinStandardHelpOptions = true,
         subcommands = [CommandLine.HelpCommand, AddEnvironment, AddRemote, CreateSite, ListRemotes, SyncFrom, SyncTo,
-                ListSites, CopyPlugin, CreateUser, ListUsers, CreateAccessToken, PublishContent, CreateGroup, ListGroups])
+                ListSites, CopyPlugin, CreateUser, ListUsers, CreateAccessToken, PublishContent, CreateGroup, ListGroups, AddGroupMembers])
 class Main {
 
     static def main(args) {
